@@ -122,12 +122,12 @@ label#no {
 }
 
 #line_number {
-		left: 35%;
+		left: 30%;
 		height: 1.2rem;
 		line-height: 2rem;
 		position: absolute;
 		top: 59%;
-		width: 10%;
+		width: 15%;
 }
 
 #position {
