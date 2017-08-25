@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: #FCE9CF;	
+	box-sizing: border-box;
+	font-family: Helvetica;
+	text-align: center;	
+}
+
+.title{
+	border: 2px solid #999;	
+	box-shadow: 5px 5px 5px rgba(204,204,204,1);
+  	color: #1BC512;
+  	font-size: 1.8em;
+	margin: 5% auto;
+  	text-decoration: underline;	
+	width: 60%;
+}
+
+form {
+	display: block;
+	margin: 2em auto;	
+}
+
+p {
+	background-color: rgba(102,255,153,1);
+	border-radius: 5px;
+	color: white;
+	font-weight: bolder;
+	line-height: 2rem;
+	margin: auto;
+	width: 50%;
+}
+
+.user label{
+	  font-style: oblique;
+	  font-size: 1.3em;
+}
+
+.presentarse {
+		border-radius: 10px;
+		font-size: 1em;
+		height: 1.5rem;
+		margin: 2%;
+		padding-left: 5px;
+		outline:none;
+		width: 20rem;	
+}
+
+#present {
+	border-radius: 5px;
+	color: #999;
+	font-weight: bold;
+	height: 40px;
+	outline: none;
+	width:95px; 
+}
+
+#present:hover {
+		border-top: 3px solid #CCC;
+		border-right: 3px solid #CCC;	
+}
+
+.seleccion label:first-child {
+		color:#6F0;
+		font-family: Georgia;
+		font-size: 1.5em;
+ 		display:block;
+		line-height:1.5rem;	
+}
+
+#colors {
+	background-color: orange;
+	color: #ddd;
+	font-size: 1.2em;
+	font-style: italic;
+	height: 2rem;
+	margin: 0.5rem auto;
+	width: 15%;	
+}
+
+#blue{
+	color: blue;
+}
+
+#green {
+	color: green;
+}
+
+#red {
+	color: red;
+}
+
+#black {
+	color: black;
+}
+
+#gray {
+	color: gray;
+}
+
+.seleccion label#torre {
+		font-family: Georgia;
+		font-size: 1em;
+		font-weight: bold;
+ 		line-height: 2rem;	
+}
+
+ label#yes, label#no {
+		font-family: Georgia;
+		font-size: 1.2em;
+		line-height: 2rem
+}
+
+label#yes {
+	color: #0F0;
+}
+
+label#no {
+	color: #C00;
+}
+
+#line_number {
+		left: 35%;
+		height: 1.2rem;
+		line-height: 2rem;
+		position: absolute;
+		top: 59%;
+		width: 10%;
+}
+
+#position {
+	left: 50%;
+	height: 1.5rem;
+	line-height: 2rem;
+	position: absolute;
+	top: 59%;
+	width: 15%;
+}
+
+#hidden {
+	left: 50%;
+	height: 1.5rem;
+	line-height: 2rem;
+	position: absolute;
+	top: 59%;
+	width: 15%;
+}
+
+#botoncito {
+	background-color: #099;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 1.3em;
+	font-weight: bolder;
+	height: 40px;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	outline: none;
+	width: 170px; 
+}
+
+#botoncito:hover {
+		border-top: 3px solid #09F;
+		border-right: 3px solid #30E7E7;	
+}
+
+#dibujito {
+		background-color:#FFF;
+		margin-bottom: 100px;	
+}
