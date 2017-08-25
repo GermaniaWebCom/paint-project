@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Ejercicio de Dibujo en Canvas con JavaScript</title>
+<!-- Aquí vemos las dos formas de invocar las CascadingStyleSheet en el documento. Les recomiendo utilizar clases para especificar etiquetas que deban diferenciarse en sus estilos en lugar de hacerlo con id's. Aunque utilizo ambas formas para ejemplificar su uso. Otra sugerencia. Los nuevos estándares Css son muuuy potentes. Siempre que les sea posible utilicen esas funcionalidades para asignar estilos a un elemento en lugar de hacerlo a través de JS. Esa es su función y utilizar la potencia de JS en esos trucos atenta contra el propio rendimiento de la aplicación. Esto es solamente un comentario al pié para compartir mi pobre experiencia. -->
+
+<link rel="stylesheet" href="main.css" />
+
+<style type="text/css">
+#line_number{
+	display: none;
+}
+
+#position {
+	display: none;
+}
+
+#hidden{
+	display:none;	
+}
+
+#forms{
+	display:none;
+}
+
+</style>
+
+</head>
+
+<body onload="dibujarBorde();">
+
+	<h1 class="title">Dibujo interactivo en el Canvas</h1>
+  
+     <form class="user" action="">
+    	<label for="nombre">Perm&iacute;tenos saludarte:</label>
+    		<input type="text" id="name" name="nombre" class="presentarse" value="" placeholder="Dinos tu nombre..."/>
+            <button type="button" id="present" onClick="capturar();">Sal&uacutedame </button>
+      </form>
+    <p id="bienvenida"></p>
+    
+    <div> 
+    <form class="seleccion">
+    	<label for="colors">Elije un color de la lista</label>
+    		<select id="colors" name="colors">
+            	<option id="default" value="">Paleta de colores</option>
+   				<option id="blue" value="#AAF">Azul</option> 
+				<option id="green" value="#AFA">Verde</option> 
+                <option id="red" value="#FAA">Rojo</option> 
+                <option id="black" value="#000">Negro</option> 
+                <option id="gray" value="#777">Gris</option>
+            </select>
+            <br />
+       <label id="torre" for="torre-eiffel">Quieres dibujar la Torre Eiffel?</label>
+       &nbsp;&nbsp;
+       		<label id="yes">S&iacute;</label>
+       		<input type="radio" name="torre-eifel" id="dibujarTorre" value="" />
+             &nbsp;&nbsp;
+            <label id="no">No</label>
+            <input type="radio" name="torre-eifel" id="noDibujar" value="" />
+            <br />
+            <input type="number" id="line_number" placeholder="Cuántas líneas quieres...?" />
+            <select id="position">
+            	<option value="">Elije el sector</option>
+                <option value="inf_izq">Abajo izquierda</option>
+                <option value="inf_der">Abajo derecha</option>
+                <option value="sup_der">Arriba derecha</option>
+                <option value="sup_izq">Arriba izquierda</option>
+                <option value="all">En los cuatro lados</option>
+            </select>
+       <br/>
+      <form id="hidden">
+                <select id="hidden" name="forms">
+                 	<option value="">Tenemos otras opciones </option>
+                    <option value="cuadrado">Cuadrado</option>
+                    <option value="rectangulo">Rect&aacute;ngulo</option>
+                    <option value="triangulo"> Tri&aacute;ngulo</option>
+      			</select>
+      </form> 
+        <input type="button" id="botoncito" value="A dibujar!!" />
+   </form>
+   
+ </div>
+ 
+	<canvas width="300" height="300" id="dibujito"></canvas>
+  
+   <script src="ejercicio_canvas.js"></script>
+   <script src="saludo.js"></script>
+   
+<!--A los efectos de apreciar diferentes formas de llamar funciones y métodos en el documento, utilizo tres diferentesa lo largo de este HTML. Cómo habrán apreciado en el button de saludo llamo a una función in situ al igual que dentro del tag de apertura del body. A su vez utilicé difererentes tags html para generar elementos parecidos. Cuidado: no todos son lo más correcto, aunque sirva para familiarizarse con su existencia. -->
+   
+
+<script type="text/javascript">
+
+/*** Creamos las variables para los menús desplegables  ******/
+var quantity = document.getElementById("dibujarTorre");
+quantity.addEventListener("click", toggleJs);
+var numero = document.getElementById("line_number");
+
+var sector = document.getElementById("line_number");
+sector.addEventListener("click", changeJs);
+var ubicacion = document.getElementById("position");
+
+var none = document.getElementById("noDibujar");
+none.addEventListener("click", visibleJs);
+var opciones = document.getElementById("hidden");
+
+//Ahora creamos las funciones que cambian sus estados. Esta es sólo una muestra de lo que pueden hacer.
+
+function toggleJs(quantity){
+
+numero.style.display = 'block';
+opciones.style.display = 'none';
+
+}
+ 
+ function changeJs(sector){
+
+ubicacion.style.display = 'block';
+
+}
+
+ function visibleJs(none){
+opciones.style.display = 'block';
+ubicacion.style.display= 'none';
+numero.style.display= 'none';
+
+}
+
+</script>
+  
+</body>
+</html>
