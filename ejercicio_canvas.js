@@ -21,7 +21,7 @@ var lienzo= area.getContext("2d");
 
 var ancho= area.width;
 var borde= "darkblue";
-var lineas= cantidad.value;
+var lineas= parseInt(cantidad.value);
 var posicion= section.value;
 var dibujaForma=forms.value;
 
@@ -67,7 +67,7 @@ if (color.value == "") {
    }
  
  //conviene declarar las variables una vez los condicionales han sido evaluados.  	
-	var lineas= cantidad.value;
+	var lineas= parseInt(cantidad.value);
 	var line=0;
 	var space= ancho/lineas;
 	var xFinal, yInicial, xOpuesta;
